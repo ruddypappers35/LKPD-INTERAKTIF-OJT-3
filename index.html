@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LKPD Interaktif: AI dalam Komunikasi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Styles for the hidden printable view */
+        .printable-container {
+            font-family: 'Poppins', sans-serif;
+            color: #1f2937; /* gray-800 */
+            background-color: #ffffff;
+            width: 210mm; /* A4 width */
+            padding: 15mm;
+            box-sizing: border-box;
+            display: none; /* Initially hidden */
+            position: absolute;
+            left: -9999px; /* Off-screen */
+            top: 0;
+            line-height: 1.6;
+        }
+        .print-header {
+            text-align: center;
+            border-bottom: 2px solid #374151; /* gray-700 */
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .print-header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .print-header .subtitle {
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+        .print-header .title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 0.5rem;
+            color: #0d9488; /* teal-600 */
+        }
+        .print-section {
+            margin-bottom: 2rem;
+        }
+        .print-section:last-child {
+            margin-bottom: 0;
+        }
+        .print-section h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #d1d5db; /* gray-300 */
+        }
+        .identity-grid {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 0.5rem 1rem;
+            align-items: start; /* Vertically align label with the top of the list */
+        }
+        .anggota-container {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0 1.5rem;
+        }
+        .anggota-container ol {
+            list-style-type: decimal;
+            padding-left: 1.5rem;
+            margin: 0;
+        }
+        .question-block {
+            margin-bottom: 1rem;
+        }
+        .question-block .question {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        .question-block .answer {
+            padding-left: 1rem;
+            white-space: pre-wrap; /* Preserve whitespace and newlines */
+            word-wrap: break-word;
+            font-style: italic;
+            color: #4b5563; /* gray-600 */
+        }
+        .printable-container table {
+             width: 100%;
+             border-collapse: collapse;
+             font-size: 0.9rem;
+        }
+        .printable-container th, .printable-container td {
+            border: 1px solid #d1d5db; /* gray-300 */
+            padding: 0.75rem;
+            text-align: left;
+            vertical-align: top;
+            word-wrap: break-word;
+        }
+        .printable-container th {
+            background-color: #f3f4f6; /* gray-100 */
+            font-weight: 700;
+            color: #111827; /* Use a dark color for header text */
+        }
+        .printable-container th:first-child,
+        .printable-container td:first-child {
+            width: 25%;
+        }
+        .printable-container td.font-semibold {
+            color: #111827; /* Use a dark color for question text */
+        }
+        .printable-container td.answer-cell {
+            white-space: pre-wrap;
+            font-style: italic;
+            color: #4b5563;
+            background-color: #f9fafb;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.545.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+<body class="bg-slate-50">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
