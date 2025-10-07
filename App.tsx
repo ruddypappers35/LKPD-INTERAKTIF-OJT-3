@@ -149,6 +149,7 @@ const App: React.FC = () => {
                     <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">LEMBAR KERJA PESERTA DIDIK (LKPD)</h1>
                     <p className="text-lg sm:text-xl font-semibold mt-1">KODING DAN KA</p>
                     <p className="text-xl sm:text-2xl font-bold text-teal-600 mt-2">"PERAN KECERDASAN ARTIFISIAL DALAM KOMUNIKASI"</p>
+                    <p className="text-sm text-gray-600 mt-4">Disusun Oleh: Rudy Susanto, S.Pd</p>
                 </header>
 
                 <Section icon={<Users className="text-teal-500" />} title="Identitas Kelompok">

@@ -33,6 +33,7 @@ const PrintableView = React.forwardRef<HTMLDivElement, PrintableViewProps>((prop
             <h1>LEMBAR KERJA PESERTA DIDIK (LKPD)</h1>
             <p className="subtitle">KODING DAN KA</p>
             <p className="title">"PERAN KECERDASAN ARTIFISIAL DALAM KOMUNIKASI"</p>
+            <p className="author">Disusun Oleh: Rudy Susanto, S.Pd</p>
         </header>
 
         <section className="print-section">
